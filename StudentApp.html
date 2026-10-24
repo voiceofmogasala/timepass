@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Student ID: S12345 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S12345</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef2f7; display: flex; justify-content: center; padding: 30px 15px; }
+    .box { background: #fff; width: 100%; max-width: 440px; padding: 24px; border: 2px solid #0b3d91; border-radius: 10px; }
+    h2 { margin-top: 0; color: #0b3d91; text-align: center; }
+    label { display: block; margin-top: 14px; font-weight: bold; }
+    input { width: 100%; padding: 9px; margin-top: 5px; border: 1px solid #999; border-radius: 5px; }
+    input[readonly] { background: #f0f0f0; }
+    .error { color: #b00020; font-size: 0.85rem; min-height: 1em; }
+    button { margin-top: 20px; width: 100%; padding: 11px; background: #0b3d91; color: #fff; border: 0; border-radius: 5px; font-size: 1rem; cursor: pointer; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="box">
+
+    <!-- Page 1: Application form -->
+    <section id="formPage">
+      <h2>Student ID Card Application</h2>
+      <form id="appForm" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <div class="error" id="nameErr"></div>
+
+        <label for="dob">Date of Birth (dd/mm/yyyy)</label>
+        <input type="text" id="dob" placeholder="dd/mm/yyyy">
+        <div class="error" id="dobErr"></div>
+
+        <label for="age">Age</label>
+        <input type="text" id="age" readonly>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile">
+        <div class="error" id="mobileErr"></div>
+
+        <label for="email">Email ID</label>
+        <input type="text" id="email">
+        <div class="error" id="emailErr"></div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Page 2: Retrieve cookie -->
+    <section id="retrievePage" class="hidden">
+      <h2>Retrieve Details</h2>
+      <label for="searchMobile">Mobile number</label>
+      <input type="text" id="searchMobile">
+      <button type="button" id="retrieveBtn">retrieve cookie</button>
+    </section>
+
+  </div>
+
+  <script src="StudentApp.js"></script>
+</body>
+</html>
